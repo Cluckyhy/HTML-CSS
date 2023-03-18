@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>块级元素与行内元素</title>
+</head>
+<body>
+  <!-- 块级元素，特点：独占一行 -->
+  <marquee>学习HTML</marquee>
+  <marquee>学习HTML</marquee>
+  <h1>露露</h1>
+  <h1>露露</h1>
+  <p>慧亿</p>
+  <p>慧亿</p>
+  <div>HTML</div>
+  <div>HTML</div>
+
+  <!-- 行内元素，特点：不独占一行 -->
+  <input type="text">
+  <input type="text">
+  <span>HTML</span>
+  <span>HTML</span>
+
+  <!-- 规则1：块级元素中能写：行内元素、块级元素（几乎什么都能写） -->
+  <div>
+    <span>HTML</span>
+    <input type="text">
+    <div>CSS</div>
+  </div>
+
+  <!-- 规则2：行内元素中能写：行内元素，但不能写块级元素 -->
+  <span>
+    <span>Lulu1</span>
+    <input type="text" />
+    <span>Lulu2</span>
+    <!-- <div>会打乱布局，违规了</div> -->
+  </span>
+  <span>Lulu3</span>
+
+  <!-- 特殊规则：h1-h6不能互相嵌套 -->
+  <h1>
+    HTML
+    <!-- <h2></h2> -->
+  </h1>
+
+  <!-- 特殊规则：p标签中块元素 -->
+  <p>
+    <h1>HTML</h1>
+  </p>
+</body>
+</html>
