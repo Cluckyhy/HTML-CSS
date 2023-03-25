@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_交集选择器</title>
+    <style>
+      .rich {
+        color: gold;
+      }
+      .beauty {
+        color: red;
+      }
+      p.beauty {
+        color: green;
+      }
+      /* 交集选择器 */
+      .rich.beauty {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="rich">土豪张三</h1>
+    <h1 class="beauty">明星李四</h1>
+    <h2 class="rich beauty">土豪明星王五</h2>
+    <hr />
+    <p class="beauty">小狗旺财</p>
+    <p class="beauty">小猪佩奇</p>
+  </body>
+</html>

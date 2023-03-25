@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04_子代选择器</title>
+    <style>
+      /* 子代选择器 */
+      div > a {
+        color: red;
+      }
+      div > p > a {
+        color: green;
+      }
+      .foot > a{
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="#">张三</a>
+      <a href="#">李四</a>
+      <a href="#">王五</a>
+      <p>
+        <a href="">赵六</a>
+        <div class="foot">
+          <a href="">孙七</a>
+        </div>
+      </p>
+    </div>
+  </body>
+</html>
