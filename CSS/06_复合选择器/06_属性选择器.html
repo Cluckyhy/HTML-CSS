@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06_属性选择器</title>
+    <style>
+      /* 第一种写法：选中具有title属性的元素 */
+      /* [title] {
+        color: red;
+      } */
+
+      /* 第二种写法：选中具有title属性，且属性值为lulu的元素 */
+      /* [title="lulu"] {
+        color: pink;
+      } */
+
+      /* 第三种写法：选中具有title属性，且属性值以字母a开头的元素 */
+      /* [title^="a"] {
+        color: blue;
+      } */
+
+      /* 第四种写法：选中具有title属性，且属性值以字母b结尾的元素 */
+      /* [title$="b"] {
+        color: orchid;
+      } */
+
+      /* 第五种写法：选中具有title属性，且属性值包含字母o的元素*/
+      [title*="o"] {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div title="JUFE">江西财经大学</div>
+    <div title="lulu">亢露露</div>
+    <div title="a_qiao">何巧</div>
+    <div title="a_huijie_b">朱慧杰</div>
+    <div title="xiaopan_b">小胖</div>
+  </body>
+</html>
