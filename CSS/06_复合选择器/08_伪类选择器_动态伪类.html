@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08_伪类选择器_动态伪类</title>
+    <style>
+      /* 动态伪类 */
+      a:link {
+        color: orange;
+      }
+      /* 选中的是访问过的a元素 */
+      a:visited{
+        color: gray;
+      }
+      /* 选中的是鼠标悬浮状态的a元素 */
+      a:hover{
+        color: skyblue;
+      }
+      /* 选中的是激活状态下的a元素 */
+      a:active{
+        color: red;
+      }
+
+      /* 选中的是鼠标悬浮的span元素 */
+      span:hover{
+        color: green;
+      }
+      /* 选中的是鼠标激活的span元素 */
+      span:active{
+        color: red;
+      }
+      
+      input:focus{
+        color: aqua;
+        background-color: green;
+      }
+      select:focus{
+        color: orange;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://www.baidu.com">去百度</a>
+    <a href="http://www.jd.com">去京东</a>
+    <span>江西财经大学</span>
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <select>
+      <option value="beijin">北京</option>
+      <option value="shanghai">上海</option>
+    </select>
+  </body>
+</html>
