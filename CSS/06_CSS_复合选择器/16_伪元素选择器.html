@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16_伪元素选择器</title>
+    <style>
+      /* 什么是伪元素？ ---- 很像元素，但不是元素（element），是元素中的一些特殊位置 */
+
+      /* 选中的是div中的第一个文字 */
+      div::first-letter {
+        color: red;
+        font-size: 20px;
+      }
+
+      /* 选中的是div中第一行文字 */
+      div::first-line {
+        background-color: yellow;
+      }
+
+      /* 选中的是p元素最开始的位置，随后创建一个子元素 */
+      p::before {
+        content: "￥";
+        color: red;
+      }
+
+      /* 选中的是p元素最后的位置，随后创建一个子元素 */
+      p::after {
+        content: ".00";
+      }
+
+
+      /* 上面的伪元素是CSS2提出的，所以可以简写成一个:(p:before)也没有问题，但是下面不行 */
+      /* 下面的伪元素是CSS3提出的，所以不可以只写一个: 必须要写两个 */
+
+      /* 选中的是div中被选择的文字 */
+      div::selection {
+        background-color: skyblue;
+        color: red;
+      }
+
+      /* 选中的是input元素中的提示文字 */
+      input::placeholder {
+        color: skyblue;
+      }
+
+
+      /*
+        伪元素
+          作用：
+            选中元素中的一些特殊位置
+              ::first-letter 选中元素中的第一个文字
+              ::first-line 选中元素中的第一行文字
+              ::selection 选中被鼠标选中的内容
+              ::placeholder 选中输入框中的提示文字
+              ::before 选中最开始的位置，创建一个子元素（必须用 content 属性指定内容）
+              ::after 选中最后的位置，创建一个子元素（必须用 content 属性指定内容）
+      */
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aut ipsa
+      dolores accusamus animi atque totam aliquam vero consectetur quaerat
+      explicabo itaque minus, repellendus accusantium, cumque mollitia ratione
+      sint blanditiis alias at magni, iste nobis minima inventore. Placeat
+      perspiciatis architecto, dolores facilis quis voluptate exercitationem eum
+      quae molestiae quisquam. Provident molestiae tenetur ducimus quis nostrum
+      ratione ipsum iste non eligendi!
+    </div>
+    <br />
+    <input type="text" placeholder="请输入用户名" />
+    <br />
+    <p>199</p>
+    <p>39</p>
+    <p>299</p>
+    <p>599</p>
+  </body>
+</html>
