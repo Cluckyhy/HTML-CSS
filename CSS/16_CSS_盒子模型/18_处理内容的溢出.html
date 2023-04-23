@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18_处理内容的溢出</title>
+    <!-- 
+      overflow 常用的值是hidden和auto，除了能处理溢出的显示方式，还可以解决很多疑难杂症
+    -->
+    <style>
+      .d1 {
+        width: 400px;
+        height: 200px;
+        background-color: skyblue;
+        overflow: visible;
+        overflow: hidden;
+        /* 溢没溢出都有滚动条 */
+        overflow: scroll;
+        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      .d2{
+        width: 1000px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
+      minima iste. Omnis officia distinctio, qui excepturi deleniti maxime
+      <div class="d2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque,
+        veritatis delectus est cupiditate a asperiores rerum eos dolorem
+        repudiandae tenetur distinctio, tempore sequi? Praesentium eaque
+        adipisci facere vero possimus aspernatur facilis repellendus, laudantium
+        nisi quas, dignissimos aliquam porro tenetur explicabo! Illo nobis
+        excepturi veniam dolore nisi explicabo assumenda commodi sunt?
+      </div>
+      ducimus corporis ipsa. Quibusdam error expedita reiciendis, iure
+      aspernatur inventore dolorum totam corrupti deleniti! Laudantium iusto
+      voluptas dolorum debitis numquam eum praesentium aliquam quod eveniet!
+      Laboriosam tempora ipsam inventore fugiat! Doloribus, perferendis sit?
+      Totam aperiam eaque maxime distinctio. Porro cupiditate saepe iusto
+      quisquam aliquid repellat, laborum consequuntur quae quas commodi
+      nesciunt, sit praesentium autem cum molestias incidunt, pariatur excepturi
+      quis aut officia deserunt repellendus quibusdam. Reiciendis enim quisquam
+      eligendi labore quod, ullam doloremque, nesciunt praesentium eum deserunt
+      beatae adipisci consequuntur in deleniti?
+    </div>
+  </body>
+</html>

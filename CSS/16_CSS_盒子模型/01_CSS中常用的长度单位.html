@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_CSS中常用的长度单位</title>
+    <style>
+      html {
+        font-size: 40px;
+      }
+      .d1 {
+        /* 第一种长度单位：px（像素） */
+        width: 200px;
+        height: 200px;
+        font-size: 20px;
+        background-color: skyblue;
+      }
+      .d2 {
+        /* 第二种长度单位：em（相对于当前元素或其父元素的font-size的倍数，如果自己没有设置font-size，向其父元素找font-size的大小） */
+        width: 10em;
+        height: 10em;
+        font-size: 20px;
+        /* font-size: 1em; */
+        background-color: orange;
+      }
+      .d3 {
+        /* 第三种长度单位：rem（相对于根元素的font-size的倍数） */
+        width: 5rem;
+        height: 5rem;
+        font-size: 20px;
+        /* font-size: 1rem; */
+        background-color: green;
+      }
+      .d4 {
+        width: 200px;
+        height: 200px;
+        font-size: 20px;
+        background-color: gray;
+      }
+      /* 第四种长度单位：%（相对其父元素的百分比） */
+      .inside {
+        width: 50%;
+        height: 20%;
+        font-size: 150%;
+        background-color: pink;
+      }
+      .test{
+        font-size: 20px;
+        background-color: blue;
+        text-indent: 2em;
+      }
+    </style>
+  </head>
+  <body style="font-size: 50px">
+    <div class="d1">1</div>
+    <hr />
+    <div class="d2">2</div>
+    <hr />
+    <div class="d3">3</div>
+    <hr />
+    <div class="d4">
+      <div class="inside">4</div>
+    </div>
+    <hr>
+    <div class="test">好好学习，天天向上</div>
+  </body>
+</html>

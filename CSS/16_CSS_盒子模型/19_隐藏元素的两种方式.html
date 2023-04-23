@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19_隐藏元素的两种方式</title>
+  <!-- 
+    隐藏元素的方式：
+      方式一：visibility:属性
+        默认值是show，如果设置为hidden，元素会隐藏，元素看不见了，还占有原来的位置（元素的大小依然保持）
+      方式二：display属性
+        设置display:none，就可以让元素隐藏
+        彻底地隐藏，不但看不见，也不占用任何位置，没有大小宽高
+  -->
+  <style>
+    .box{
+      width: 200px;
+      height: 200px;
+    }
+    .box1{
+      background-color: skyblue;
+      /* display: none; */
+      visibility: hidden;
+    }
+    .box2{
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1">1</div>
+  <div class="box box2">2</div>
+</body>
+</html>

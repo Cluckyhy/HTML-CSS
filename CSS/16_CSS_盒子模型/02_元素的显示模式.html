@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>元素的显示模式</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+    <style>
+      /* 
+      块元素(block)
+        1、主体结构标签：html、body
+        2、排版标签：div、h1-h6、hr、p、pre
+        3、列表标签：ul、ol、li、dl、dt、dd
+        4、表格相关标签：table、tbody、thead、tfoot、tr、caption
+        5、form与option
+        特点：
+          1、在页面中独占一行，不会与任何元素共用一行，是从上到下排列的
+          2、默认宽度：撑满父元素
+          3、默认高度：由内容撑开
+          4、可以通过css设置宽高
+      
+      行内元素(inline)
+        1、文本标签：span、strong、em、sup、sub、ins、del
+        2、a与label
+        特点：
+          1、在页面中不独占一行，一行中不能容纳下的行内元素，会在下一行继续从左到右排列
+          2、默认宽度：由内容撑开
+          3、默认高度：由内容撑开
+          4、无法通过css设置宽高
+          
+      行内块元素(inline-block)
+        1、图片：img
+        2、单元格：td、th
+        3、表单控件：input、select、button、textarea
+        4、框架标签：iframe
+        特点：
+          1、在页面中不独占一行，一行中不能容纳下的行内元素，会在下一行继续从左到右排列
+          2、默认宽度：由内容撑开
+          3、默认高度：由内容撑开
+          4、可以通过css设置宽高
+    */
+      body {
+        background-color: gray;
+      }
+      .d1 {
+        background-color: skyblue;
+      }
+      .d2 {
+        background-color: orange;
+      }
+      .d3 {
+        background-color: pink;
+      }
+      .one {
+        background-color: skyblue;
+      }
+      .two {
+        background-color: orange;
+      }
+      span {
+        width: 200px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d1">山回路转不见君</div>
+    <div class="d2">雪上空留马行处</div>
+    <div class="d3">风里雨里，我在江西财经大学等你！</div>
+    <hr />
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <hr />
+    <img src="../../HTML/imgs/love.png" alt="" />
+  </body>
+</html>
