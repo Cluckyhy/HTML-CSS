@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_字体复合属性</title>
+    <style>
+      /* 
+        属性名 font 可以把上述字体样式合并成一个属性
+          1、字体大小和字体族必须要写上
+          2、字体族必须是最后一位，字体大小必须是倒数第二位
+          3、各属性间用空格隔开
+      */
+      .jufe1 {
+        font: bold italic 100px 'STHupo',sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jufe1">江西财经大学1</div>
+    <div class="jufe2">江西财经大学2</div>
+    <div class="jufe3">江西财经大学3</div>
+    <div class="jufe4">江西财经大学4</div>
+  </body>
+</html>

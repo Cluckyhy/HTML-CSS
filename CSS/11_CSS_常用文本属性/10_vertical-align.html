@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10_vertical-align</title>
+  <style>
+
+    /*
+      vertical-align的作用：
+        用于控制行内元素在其所在那一行的垂直方向上的对齐方式
+        也可以控制表格里的对齐方式
+        但是是不能控制块级元素的
+    */
+    
+    div{
+      font-size: 100px;
+      height: 300px;
+      background-color: skyblue;
+    }
+
+    span{
+      font-size: 40px;
+      background-color: orange;
+      vertical-align: baseline;
+      vertical-align: bottom;
+      vertical-align: top;
+      vertical-align: middle;
+    }
+
+    img{
+      height: 30px;
+      vertical-align: middle;
+    }
+
+    .test1{
+      height: 400px;
+      width: 400px;
+      background-color: gray;
+      
+    }
+
+    .test2{
+      height: 100px;
+      width: 100px;
+      background-color: green;
+      vertical-align: middle;
+    }
+
+    .lisi{
+      vertical-align: bottom;
+    }
+  </style>
+</head>
+<body>
+  <div>jufe江西财经大学x<span>x前端</span></div>
+  <hr>
+  <div>
+    jufe江西财经大学x<img src="../../HTML/imgs/xion.jpg" alt="">
+  </div>
+  <hr>
+  <div class="test1">
+    <div class="test2"></div>
+  </div>
+  <hr>
+  <table border="1" cellspacing="0">
+    <caption>人员信息</caption>
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr height="100">
+        <td class="lisi">李四</td>
+        <td>17</td>
+        <td>男</td>
+      </tr>
+      <tr>
+        <td>王妞</td>
+        <td>16</td>
+        <td>女</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04_字体粗细</title>
+    <style>
+      /* 
+        100 - 1000 且没有单位，数值越大，字体越粗(或一样粗，具体的看字体设计师的精确程度)
+        100 - 300 等同于 lighter，400 -500 等同于 normal，600及以上等同于 bold
+      */
+      .jufe1 {
+        font-size: 100px;
+        font-weight: lighter;
+      }
+      .jufe2 {
+        font-size: 100px;
+        /* 默认为500（normal） */
+        font-weight: normal;
+      }
+      .jufe3 {
+        font-size: 100px;
+        font-weight: bold;
+      }
+      .jufe4 {
+        font-size: 100px;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jufe1">江西财经大学1</div>
+    <div class="jufe2">江西财经大学2</div>
+    <div class="jufe3">江西财经大学3</div>
+    <div class="jufe4">江西财经大学4</div>
+  </body>
+</html>

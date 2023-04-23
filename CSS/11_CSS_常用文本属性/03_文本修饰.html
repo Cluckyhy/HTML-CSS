@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_文本修饰</title>
+    <style>
+      /* 
+        text-decoration
+
+        none 无装饰线
+        overline 无装饰线
+        underline 无装饰线
+        line-through 无装饰线
+
+        dotted 虚线
+        wavy 波浪线
+
+        也可以指定颜色
+      */
+      body {
+        font-size: 30px;
+      }
+      .jufe1 {
+        /* 上划线 */
+        text-decoration: overline;
+      }
+      .jufe2 {
+        /* 下划线 */
+        text-decoration: underline dotted red;
+      }
+      .jufe3 {
+        /* 删除线 */
+        text-decoration: line-through wavy green;
+      }
+      .jufe4,
+      ins,
+      del {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jufe1">江西财经大学1</div>
+    <div class="jufe2">江西财经大学2</div>
+    <div class="jufe3">江西财经大学3</div>
+    <a class="jufe4" href="www.baidu.com">百度</a>
+    <ins>测试1</ins>
+    <del>测试2</del>
+  </body>
+</html>
