@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_解决浮动后的影响</title>
+    <!-- 
+      1、给父元素指定高度
+      2、给父元素也设置浮动，带来其他影响
+      3、给父元素设置 overflow: hidden
+      4、在所有浮动元素的最后面，添加一个块级元素，并给该块级元素设置 clear: both
+      5、(推荐)给浮动元素的父元素，设置伪元素，通过伪元素清除浮动，原理与方案四相同
+        ::parent::after{
+          content: "";
+          display: block;
+          clear: both;
+        }
+      注意：
+        布局中的一个原则：设置浮动的时候，兄弟元素要么全都浮动，要么全都不浮动
+    -->
+    <style>
+      .outer {
+        width: 500px;
+        background-color: gray;
+        border: 1px solid black;
+        /* 第一种解决方案 */
+        /* height: 122px; */
+
+        /* 第二种解决方案 */
+        /* float: left; */
+
+        /* 第三种解决方案 */
+        /* overflow: scroll; */
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        border: 1px solid black;
+        margin: 10px;
+      }
+      .box1,
+      .box2,
+      .box3,
+      .box4 {
+        float: left;
+      }
+
+      /* 第四种解决方案 */
+      .mofa{
+        clear: both;
+      }
+
+      /* 第五种解决方案 */
+      .outer::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+      <!-- <div class="box box5">5</div> -->
+      <!-- <div class="mofa"></div> -->
+    </div>
+    <div style="background-color: orange;">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, nulla
+      doloribus magnam beatae similique quia eveniet ratione a, illo quos
+      explicabo facere. Consequuntur, architecto repudiandae. Voluptatem
+      eligendi rem sint, ad ipsum ut quisquam quae minus, facere ab eos
+      consequuntur, suscipit assumenda consequatur dolores cupiditate nulla eius
+      sed harum aut ullam quis cum. A amet, veniam, aut sequi minus nulla quam
+      pariatur molestias voluptatum architecto qui recusandae placeat! Harum
+      nesciunt eaque nam illo possimus quis totam nemo ex quidem! Numquam
+      aperiam cumque explicabo beatae iusto odit quidem ullam rerum suscipit, et
+      veniam optio, in doloribus illo expedita quam est rem repudiandae, cum
+      dicta ea. Veniam aliquid quibusdam nemo omnis nesciunt illo vel rem cumque
+      laboriosam quos perferendis, libero ipsum distinctio provident? Voluptate,
+      explicabo alias eius repellendus et molestiae consequuntur quam
+      dignissimos, maiores doloribus inventore, voluptatibus aspernatur ad.
+      Suscipit dolor saepe, voluptatem aut amet voluptas? Nam quod incidunt
+      voluptas quam quis totam iure soluta architecto assumenda qui explicabo
+      dignissimos tenetur laborum beatae id perferendis voluptate necessitatibus
+      vel dolorum debitis modi, corrupti tempore, commodi ipsam? Blanditiis ipsa
+      deserunt, consequuntur assumenda mollitia dolorem ex cupiditate qui
+      consectetur omnis obcaecati corporis tenetur beatae distinctio excepturi.
+      Laudantium voluptatibus a, minima mollitia itaque ullam atque ducimus
+      doloribus?
+    </div>
+  </body>
+</html>
