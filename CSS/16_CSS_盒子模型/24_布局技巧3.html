@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24_布局技巧3</title>
+  <!-- 
+    vertical-align: middle 是参照【父元素】的x字母来对齐的
+    为了消除父元素的文字对里面子元素的影响，把font-size设置成0
+    然后所有的子元素，设置vertical-align: middle。就可以让他们垂直居中了
+
+    如何让子元素，在父元素中 水平居中：
+      1、若子元素为块元素，给父元素加上：margin: 0 auto;
+      2、若子元素为行内元素、行内块元素，给父元素加上：text-align: center
+
+    如何让子元素，在父元素中 垂直居中
+      1、若子元素为块元素，给子元素加上：margin-top，值为（父元素content - 子元素盒子总高）/ 2
+      2、若子元素为行内元素、行内块元素：
+            让父元素的 height = line-height，每个子元素都加上：vertical-align: middle
+            补充若想绝对垂直居中，父元素 font-size 设置为 0
+  -->
+  <style>
+    .outer{
+      width: 400px;
+      height: 400px;
+      background-color: gray;
+      text-align: center;
+      line-height: 400px;
+      font-size: 0px;
+    }
+    .inner{
+      background-color: orange;
+      font-size: 20px;
+    }
+    img{
+      width: 50px;
+      height: 50px;
+      vertical-align: middle;
+    }
+    span{
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <span class="inner">出来玩啊</span>
+    <img src="../../HTML/imgs/love.png" alt="">
+  </div>
+</body>
+</html>

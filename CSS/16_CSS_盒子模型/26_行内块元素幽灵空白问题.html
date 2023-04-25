@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>26_行内块元素幽灵空白问题</title>
+  <!-- 
+    行内块元素的幽灵空白问题，比如一张图片，默认下面是有一点空白的，
+    是因为行内块元素与文本的基线对齐，而文本的基线与文本最底端之间是有一定的距离
+    解决方案：
+      1、给行内块设置vertical，值不为baseline即可，设置为middle、top、bottom都可行
+      2、若元素中只有一张图片，设置图片为 display: block
+      3、给父元素设置 font-size：0 如果该行内块内部还有文本，则需要单独设置font-size
+
+  -->
+  <style>
+    div{
+      width: 500px;
+      background-color: skyblue;
+      /* 第三种方案 */
+      /* font-size: 0; */
+    }
+    img{
+      height: 100px;
+      /* 第一种方案 */
+      /* display: block; */
+      /* 第二种方案 */
+      vertical-align: bottom;
+
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="../imgs/guixie.jpg" alt="">xg
+  </div>
+</body>
+</html>

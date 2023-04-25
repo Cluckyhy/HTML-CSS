@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11_文本两端对齐方法</title>
+    <!-- 
+      使用 text-align: justify 属性可以实现，此属性只适用于【块级】元素和【表格单元格】，而行内元素无法使用该属性实现对齐
+      在使用 text-align: justify 之前，需要确保父元素已经设置了宽度，以便让子元素在内部进行分布和对齐。
+      一般都是用伪元素来充当于需要平均分配字体的元素的参照对象。
+    -->
+    <style>
+      .d1{
+        width: 500px;
+        height: 50px;
+        line-height: 50px;
+        background-color: pink;
+        /* 如果不写display:flex，会使sp2跟着伪元素同一行 */
+        display: flex;
+      }
+      .sp1{
+        /* 这里设置inline-block是因为，text-align只对块元素起作用，并且要设置宽度 */
+        display: inline-block;
+        /* 这里一定要设置宽度 */
+        width: 100px;
+        background-color: greenyellow;
+        text-align: justify;
+      }
+      .sp1::after{
+        /* 这里设置inline-block是因为，需要设置width:100%，让sp1这个块元素一行占不下，并且刚好需要和父元素同宽，不需要内容 */
+        display: inline-block;
+        content:'';
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d1">
+      <span class="sp1">诗句</span>：
+      <span class="sp2">落霞与孤鹜齐飞，秋水共长天一色。</span>
+    </div>
+  </body>
+</html>
