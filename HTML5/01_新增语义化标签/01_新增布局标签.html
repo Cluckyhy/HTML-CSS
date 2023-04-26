@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_新增布局标签</title>
+  <!-- 
+    1、新增布局标签
+      header：整个页面，或部分页面的头部
+      footer：整个页面，或部分页面的底部
+      nav：导航
+      article：文章、帖子、杂志、新闻、博客、评论等
+      section：页面中的某段文字，或文章中某段文字（里面文字通常里面会包含标题）
+      aside：侧边栏
+
+      article和section的区别：
+        1、artical里面可以有多个section
+        2、section强调的是分段或分块，如果你想将一块内容分成几段的时候，可使用section元素
+        3、article比section更强调独立性，一块内容如果比较独立，应该使用article元素
+  -->
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+    <h1>商品汇</h1>
+  </header>
+  <hr>
+  <!-- 主导航 -->
+  <nav>
+    <a href="#">首页</a>
+    <a href="#">订单</a>
+    <a href="#">购物车</a>
+    <a href="#">我的</a>
+  </nav>
+  <!-- 主要内容 -->
+  <div class="page_content">
+    <!-- 文章 -->
+    <article>
+      <h2>《如何一夜暴富》</h2>
+      <section>
+        <h3>第一种方式，通过做梦</h3>
+        <p>你要这样做梦..................</p>
+      </section>
+      <section>
+        <h3>第一种方式，通过做梦</h3>
+        <p>你要这样做梦..................</p>
+      </section>
+      <section>
+        <h3>第一种方式，通过做梦</h3>
+        <p>你要这样做梦..................</p>
+      </section>
+    </article>
+    <!-- 侧边栏 -->
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="#">秒杀专区</a></li>
+          <li><a href="#">会员专区</a></li>
+          <li><a href="#">专门购物</a></li>
+          <li><a href="#">品牌专区</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- 脚部 -->
+    <footer>
+      <a href="">友情链接1</a><a href="">友情链接1</a><a href="">友情链接1</a>
+    </footer>
+  </div>
+</body>
+</html>
