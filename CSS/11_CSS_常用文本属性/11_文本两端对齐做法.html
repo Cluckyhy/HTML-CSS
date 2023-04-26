@@ -19,6 +19,8 @@
         /* 如果不写display:flex，会使sp2跟着伪元素同一行 */
         display: flex;
       }
+
+      /* 方案一 */
       .sp1{
         /* 这里设置inline-block是因为，text-align只对块元素起作用，并且要设置宽度 */
         display: inline-block;
@@ -32,6 +34,14 @@
         display: inline-block;
         content:'';
         width: 100%;
+      }
+
+      /* 方案二 */
+      .sp1{
+        width: 100px;
+        background-color: greenyellow;
+        text-align: justify;
+        text-align-last: justify;
       }
     </style>
   </head>
