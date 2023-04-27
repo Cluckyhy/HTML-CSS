@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_CSS3简介</title>
+</head>
+<body>
+  <!-- 
+    1、CSS3概述：
+      CSS3是CSS2的升级版本，它在CSS2基础上，新增了很多强大的新功能，从而解决一些实际面临的问题。
+      CSS3在未来会按照模块化的方式发展
+      CSS3的新特性如下：
+        1、新增了更加实用的选择器，例如：动态伪类选择器、目标伪类选择器、伪元素选择器等等。
+        2、新增了更好的视觉效果，例如：圆角、阴影、渐变等。
+        3、新增了丰富的背景效果，例如：支持多个背景图片，同时新增了若干个背景相关的属性。
+        4、新增了全新的布局方案 --- 弹性盒子
+        5、新增了Web字体，可以显示用户电脑上没有安装的字体。
+        6、增强了颜色，例如：HSL、HSLA、RGBA、几种新的颜色模式，新增opacity属性来控制透明度
+        7、增加了2D和3D变换，例如：旋转、扭曲、缩放、位移等。
+        8、增加动画与过渡效果，让效果的变换更具流线性、平滑性
+        ......
+    2、CSS3私有前缀
+        什么是私有前缀？
+          如下代码的 -webkit-就是私有前缀
+          div{
+            width: 400px;
+            height: 400px;
+            -webkit-border-radius: 20px;
+          }
+        为什么要有私有前缀？
+          W3C标准所提出的某个CSS特性，在被浏览器正式支持之前，浏览器厂商会根据浏览器的内核，使用私有前缀
+          来测试该CSS特性，在浏览器正式支持该CSS特性后，就不需要私有前缀了
+          
+          举个例子：
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            border-radius: 20px;
+          
+        常见浏览器私有前缀
+          Chrome 浏览器 -webkit-
+          Safari 浏览器 -webkit-
+          Firfox 浏览器 -moz-
+          Edge 浏览器 -webkit-
+          旧 Opera 浏览器 -o-
+          旧 IE 浏览器 -ms-
+  -->
+</body>
+</html>
