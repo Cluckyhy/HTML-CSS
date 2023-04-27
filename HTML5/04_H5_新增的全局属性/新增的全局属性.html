@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新增的全局属性</title>
+  <style>
+    div{
+      width: 600px;
+      height: 200px;
+      border: 1px solid black;
+      font-size: 20px;
+    }
+    .box1{
+      background-color: skyblue;
+    }
+    .box2{
+      background-color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1" spellcheck="true" contenteditable>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, modi.</div>
+  <div class="box2" draggable="true" ondragend="go(event)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, modi.</div>
+  <div class="box3" hidden>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, modi.</div>
+
+  <script type="text/javascript">
+    function go(e){
+      alert(e.x)
+    }
+  </script>
+</body>
+</html>
