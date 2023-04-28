@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02_新增长度单位</title>
+    <!-- 
+      1、CSS3新增长度单位
+        1、rem根元素字体大小的倍数，只与根元素字体大小有关。
+        2、vw视口宽度的百分之多少，10vw就是视口宽度的10%。 （注重掌握）
+        3、vh视口高度的百分之多少，10vh就是视口宽度的10%。
+        4、vmax视口宽度中大的那个的百分之多少。（了解即可）
+        5、vmin视口宽度中小的那个的百分之多少。（了解即可）
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+      }
+      .box2 {
+        width: 50vw;
+        height: 20vh;
+        background-color: orange;
+        /* margin: 0 auto; */
+      }
+      .box3 {
+        width: 50vmax;
+        height: 20vmax;
+        background-color: green;
+        /* margin: 0 auto; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">像素</div>
+    <div class="box2">vw和vh</div>
+    <div class="box3">vmax</div>
+  </body>
+</html>

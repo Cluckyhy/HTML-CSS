@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03_background-size</title>
+  <!-- 
+    background-size
+      作用：设置背景图的尺寸
+      语法：
+        1、auto：背景图片的真实大小 -- 默认值
+
+        2、用长度值指定背景图片大小，不允许负值
+        background-size：300px 200px;
+
+        3、用百分比指定背景图大小，不允许负值
+        background-size：100% 100%;
+
+        4、contain：将背景图片等比例缩放，是背景图片的宽高，与容器的宽或高相等，再将完整背景图片包含在容器内，
+        但要注意：可能会造成容器里面部分区域没有背景图片。
+        background-size：contain;
+
+        5、cover：将背景图片等比例缩放，直到完全覆盖容器，图片会尽可能全的显示在元素上，但要注意：背景图片有可能显示不完整。--相对比较好的选择。
+        background-size：cover;
+  -->
+  <style>
+    .box1{
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+      background-image: url('../imgs/cloud.png');
+      /* background-size: 400px 400px; */
+      /* background-size: 100% 100%; */
+      background-size: contain;
+      background-size: cover; /* 最合适 */
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">你好啊</div>
+</body>
+</html>
