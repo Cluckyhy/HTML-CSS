@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04_文本修饰</title>
+    <!-- 
+      文本修饰
+        CSS3升级了 text-decoration属性，让其变成了复合属性
+        text-decoration: text-decoration-line || text-decoration-style || text-decoration-color
+      子属性及其含义：
+        text-decoration-line：
+          none
+          underline
+          overline
+          line-through
+        
+        text-decoration-style：
+          solid：实线
+          double：双线
+          dotted：点状线条
+          dashed：虚线
+          wavy：波浪线
+
+        text-decoration-color：
+    -->
+    <style>
+      h1 {
+        font-size: 100px;
+        text-decoration: none;
+        text-decoration: underline;
+        text-decoration: overline;
+        text-decoration: line-through;
+
+        text-decoration-line: overline;
+        text-decoration-style: dashed;
+        text-decoration-color: red;
+
+        /* 复合属性 */
+        text-decoration: underline wavy blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>你好啊，欢迎来到江西财经大学！</h1>
+  </body>
+</html>

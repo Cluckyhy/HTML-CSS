@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_文本描边</title>
+  <!-- 
+    文本描边
+      注意：文本描边功能仅 webkit 内核浏览器支持
+      -webkit-text-stroke-color: 设置文字描边的宽度，写长度值
+      -webkit-text-stroke-width: 设置文字描边的颜色，写颜色值
+      -webkit-text-stroke: 复合属性，设置文字描边宽度和颜色
+  -->
+  <style>
+    h1{
+      font-size: 100px;
+      -webkit-text-stroke-color: red;
+      -webkit-text-stroke-width: 3px;
+      -webkit-text-stroke: 3px blue;
+      color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <h1>先生您好，欢迎光临红浪漫！</h1>
+</body>
+</html>
