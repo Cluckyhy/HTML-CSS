@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_web字体</title>
+  <!-- 
+    web字体
+      基本用法：
+        可以通过@font-face指定字体的具体地址，浏览器会自动下载该字体
+        这样就不依赖用户电脑上的字体了
+      语法：
+        简单方式
+        /* @font-face {
+          font-family: '露露';
+          src: url('引入一个字体库.ttf，但是由于文件太大，不推荐使用');
+        } */
+        高兼容性写法：
+        @font-face {
+          font-family: "露露";
+          font-display: swap;
+          src: url('./font1/webfont.eot'); /* IE9 */
+          src: url('./font1/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('./font1/webfont.woff2') format('woff2'),
+          url('./font1/webfont.woff') format('woff'), /* chrome、firefox */
+          url('./font1/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+          url('./font1/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+        }
+
+      定制字体
+        中文的字体文件很大，使用完整的字体不现实，通常针对某几个文字进行单独定制
+  -->
+  <style>
+    /* @font-face {
+      font-family: '露露';
+      src: url('引入一个字体库.ttf，但是由于文件太大，不推荐使用');
+    } */
+    @font-face {
+      font-family: "露露";
+      font-display: swap;
+      src: url('./font1/webfont.eot'); /* IE9 */
+      src: url('./font1/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('./font1/webfont.woff2') format('woff2'),
+      url('./font1/webfont.woff') format('woff'), /* chrome、firefox */
+      url('./font1/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url('./font1/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+    }
+    h1{
+      font-size: 100px;
+      font-family: '露露';
+    }
+  </style>
+</head>
+<body>
+  <h1>春风得意马蹄疾，不信人间有别离。</h1>
+</body>
+</html>
