@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02_高级使用</title>
+    <!-- 
+      transition-delay
+        作用：指定开始过渡的延迟时间，单位：s或ms
+      transition-timing-function
+        作用：设置过渡的类型
+        常用值：
+          ease：平滑过渡--默认值
+          linear：匀速过渡
+          ease-in： 慢 -- 快
+          ease-out：快 -- 慢
+          ease-in-out：慢 -- 快 -- 慢
+          step-start：等同于 steps(1, start)
+          step-end：等同于 steps(1, end)
+          steps(integer,?)：接受两个参数的步进函数，
+            第一个参数必须为正整数，指定函数的步数，
+            第二个参数取值可以是 start 或 end，指定每一步的值发生变化的时间点，第二个参数的默认值为end
+          cubic-bezier(number,number,number,number)特定的贝塞尔曲线类型
+
+    -->
+    <style>
+      .outer {
+        width: 1300px;
+        height: 900px;
+        border: 1px solid black;
+      }
+      .outer:hover .box {
+        width: 1300px;
+      }
+      .box {
+        width: 200px;
+        height: 100px;
+        /* 让所有能过渡的属性，都过渡 */
+        transition-property: all;
+
+        /* 设置一个时间，让所有人用 */
+        transition-duration: 5s;
+
+        /* 过渡延迟 */
+        /* transition-delay: 2s; */
+      }
+      .box1 {
+        background-color: skyblue;
+        transition-timing-function: ease;
+      }
+      .box2 {
+        background-color: gray;
+        transition-timing-function: linear;
+      }
+      .box3 {
+        background-color: orange;
+        transition-timing-function: ease-in;
+      }
+      .box4 {
+        background-color: purple;
+        transition-timing-function: ease-out;
+      }
+      .box5 {
+        background-color: tomato;
+        transition-timing-function: ease-in-out;
+      }
+      .box6 {
+        background-color: deeppink;
+        transition-timing-function: step-start;
+      }
+      .box7 {
+        background-color: pink;
+        transition-timing-function: step-end;
+      }
+      .box8 {
+        background-color: chocolate;
+        transition-timing-function: steps(20, start);
+        transition-timing-function: steps(20, end);
+      }
+      .box9 {
+        background-color: green;
+        transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="box box1">ease（慢、快、慢）</div>
+      <div class="box box2">linear（匀速）</div>
+      <div class="box box3">ease-in（慢、快）</div>
+      <div class="box box4">ease-out（快、慢）</div>
+      <div class="box box5">ease-in-out（慢、快、慢）</div>
+      <div class="box box6">step-start不考虑过渡的时间，直接就是终点</div>
+      <div class="box box7">
+        step-end考虑过渡时间，但无过渡效果，过渡时间到了以后，瞬间到达终点
+      </div>
+      <div class="box box8">steps(20)分步过渡</div>
+      <div class="box box9">cubic-bezier无敌贝塞尔曲线</div>
+    </div>
+  </body>
+</html>

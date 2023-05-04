@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>01_基本使用</title>
-  <style>
-    .box1{
-      width: 200px;
-      height: 200px;
-      background-color: orange;
-      /* 设置哪个属性需要过渡效果 */
-      transition-property: height;
-      /* 设置过渡时间 */
-      transition-duration: 1s;
-    }
-    .box1:hover{
-      height: 400px;
-    }
-  </style>
-</head>
-<body>
-  <div class="box1"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_基本使用</title>
+    <!-- 
+      过渡：
+        过渡可以不使用 Flash动画，不使用javascript的情况下，让元素从一种形式，平滑过渡为另一种样式。
+      transition-property
+        作用：定义哪个属性需要过渡，只有在该属性中定义的属性（比如宽，高，颜色等）才会有过渡效果。
+        常用值：
+          none：不过渡任何属性
+          all：过渡所有能过渡的属性
+          具体某个属性名：例如：width、height、若有多个以逗号分隔。
+
+      注意：不是所有的属性都能过渡，值为数字，或者值能转为数字的属性，都支持过渡，否则不支持过渡。
+        常见的支持过渡的属性有：颜色、长度值、百分比，z-index、opacity、2D变换属性、3D变换属性、阴影
+      
+      transition-duration
+        作用：设置过渡的持续时间，即：一个状态过渡到另一个状态耗时多久。
+        常用值：
+          1、0：没有任何过渡时间---默认值
+          2、s或ms：秒或毫秒
+          3、列表：
+            如果想让所有的属性都持续一个时间，那就写一个值。
+            如果想让每一个属性持续不同的时间那就写一个时间的列表。
+    -->
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        opacity: 0.5;
+        /* 设置哪个属性需要过渡效果 */
+        /* transition-property: width, height, background-color; */
+
+        /* 让所有能过渡的属性，都过渡 */
+        transition-property: all;
+
+        /* 分别设置过渡时间 */
+        transition-duration: 1s, 1s, 1s;
+
+        /* 设置一个时间，让所有人用 */
+        transition-duration: 1s;
+      }
+      .box1:hover {
+        height: 400px;
+        width: 400px;
+        background-color: green;
+        /* display: none; */
+        transform: rotate(45deg);
+        box-shadow: 0px 0px 20px black;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+  </body>
 </html>
