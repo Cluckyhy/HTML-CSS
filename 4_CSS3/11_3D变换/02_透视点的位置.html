@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_透视点的位置</title>
+  <!-- 
+    透视点位置
+      所谓透视点位置，就是观察者位置；默认的透视点在元素的中心
+      使用：perspective-origin 设置观察者位置（透视点的位置），例如：
+        相对坐标轴往右偏移400px，往下偏移300px（相当于人蹲下300像素，然后向右移动400像素看元素）
+        perspective-origin: 400px 300px
+    注意：
+      通常情况下，我们不需要调整透视点位置。
+  -->
+  <style>
+    .outer{
+      width: 200px;
+      height: 200px;
+      border: 2px solid black;
+      margin: 0 auto;
+      margin-top: 100px;
+      /* 开启3D空间 */
+      transform-style: preserve-3d;
+      /* 设置景深（有了透视效果，近大远小） */
+      perspective: 500px;
+      /* 设置透视点的位置 */
+      perspective-origin: 102px 102px;
+    }
+    .inner{
+      width: 200px;
+      height: 200px;
+      background-color: deepskyblue;
+      transform: rotateX(45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">你好啊</div>
+  </div>
+</body>
+</html>

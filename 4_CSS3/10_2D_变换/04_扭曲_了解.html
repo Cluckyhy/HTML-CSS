@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04_扭曲_了解</title>
+  <!-- 
+    2D扭曲（了解）
+      2D扭曲是指：让元素在二维平面内被“拉扯”，进而“走形”，实际开发几乎不用，了解既可。
+      1、给元素添加 转换属性：transform
+      2、编写 transform 的具体值，相关可选值：
+        skewX，设置元素在水平方向扭曲，值为角度值，会将元素的左上角、右下角拉扯
+        skewY，设置元素在垂直方向扭曲，值为角度值，会将元素的左上角、右下角拉扯
+        skew，一个值代表skewX，两个值分别代表：skewX，skewY
+  -->
+  <style>
+    .outer{
+      width: 200px;
+      height: 200px;
+      border: 2px solid black;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+    .inner{
+      width: 200px;
+      height: 200px;
+      background-color: deepskyblue;
+      transform: skewX(30deg);
+      transform: skewX(-30deg);
+      transform: skewX(30deg) skewY(60deg);
+      transform: skew(30deg, 30deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">你好啊</div>
+  </div>
+</body>
+</html>
