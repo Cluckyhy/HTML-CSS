@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_位移</title>
+  <!-- 
+    2D位移可以改变元素的位置，具体的使用方式如下：
+      1、先给元素添加 转换属性：transform
+      2、编写 transform 的具体值，相关可选值如下：
+        translateX
+          设置水平方向的位置，需指定长度值，若指定的是百分比，参考的是自身宽度的百分比
+        translateY
+          设置垂直方向的位置，需指定长度值，若指定的是百分比，参考的是自身宽度的百分比
+        translate
+          一个值代表水平方向，两个值代表：水平和垂直方向
+    注意：
+      1、位移与相对定位很相似，都不脱离文档流，不会影响到其他元素。
+      2、与相对定位的区别：相对定位的百分比值，参考的是其父元素；定位的百分比值，参考的是其自身。
+      3、浏览器针对位置有优化，与定位相比，浏览器处理位移的效率更高。
+      4、transform 可以链式编写：例如：
+        transform: translateX(30px) translateY(40px);
+      5、位移对行内元素无效
+      6、位移配合定位，可以实现元素的水平垂直居中。
+        .box{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%)
+        }
+  -->
+  <style>
+    .outer{
+      width: 200px;
+      height: 200px;
+      border: 2px solid black;
+      margin: 0 auto;
+      margin-top: 100px;
+      position: relative;
+    }
+    .inner{
+      width: 200px;
+      height: 200px;
+      background-color: deepskyblue;
+      /* 位置的百分比是相对自身 */
+      /* 水平位移 */
+      transform: translateX(50%);
+      /* 垂直位移 */
+      transform: translateY(50%);
+      /* 水平+垂直位移 */
+      transform: translateX(50%) translateY(50%);
+      transform: translateX(50%, 50%);
+    }
+    .inner2{
+      width: 60px;
+      height: 60px;
+      background-color: orange;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      /* margin-top: -30px; */
+      /* margin-left: -30px; */
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">你好啊</div>
+  </div>
+  <hr>
+  <div class="outer">
+    <div class="inner2">你好啊</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02_字体图标_方式一</title>
+    <!-- 
+      字体图标
+        1、相比图片更加清晰。
+        2、灵活性高，更方便改变大小、颜色、风格等。
+        3、兼容性好，IE也能支持。
+    -->
+    <style>
+      /* 第一步 */
+      @font-face {
+        font-family: "iconfont";
+        src: url("./font2/iconfont.woff2?t=1683168901787") format("woff2"),
+          url("./font2/iconfont.woff?t=1683168901787") format("woff"),
+          url("./font2/iconfont.ttf?t=1683168901787") format("truetype");
+      }
+      /* 第二步 */
+      .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 100px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="iconfont">&#xe699;</span>
+    <br>
+    <span class="iconfont">&#xe69a;</span>
+    <br>
+    <span class="iconfont">&#xe8ab;</span>
+  </body>
+</html>
