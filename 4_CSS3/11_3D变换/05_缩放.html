@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_缩放</title>
+    <!-- 
+      3D缩放
+        3D缩放是在2D缩放的基础上，可以让元素沿z轴缩放，具体使用方式如下：
+          1、先给元素添加 转换属性 transform
+          2、编写 transform 的具体值，3D相关可选值：
+            scaleZ：设置z轴方向上的缩放比例，值为一个数字，1表示不缩放，大于1放大，小于1缩小。
+            scale3d：第一个参数对应x轴，第二个参数对应y轴，第三个参数对应z轴，参数不允许省略。
+    -->
+    <style>
+      .outer {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        margin: 0 auto;
+        margin-top: 100px;
+        /* 开启3D空间 */
+        transform-style: preserve-3d;
+        /* 设置景深（有了透视效果，近大远小） */
+        perspective: 500px;
+        /* 设置透视点的位置 */
+        perspective-origin: 102px 102px;
+      }
+      .inner {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(39, 187, 236, 0.527);
+        transform: scaleX(0.8);
+        transform: scaleY(0.8);
+        transform: scaleZ(2) rotateY(45deg);
+        transform: scale(1.5, 1.5, 4) rotateY(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">你好啊</div>
+    </div>
+  </body>
+</html>
