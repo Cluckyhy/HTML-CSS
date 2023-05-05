@@ -1,29 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>01_基本使用</title>
-  <style>
-    .outer{
-      width: 1000px;
-      height: 100px;
-      border: 1px solid black;
-    }
-    .inner{
-      width: 100px;
-      height: 100px;
-      background-color: deepskyblue;
-      animation-name: lulu;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_基本使用</title>
+    <!-- 
+    动画的基本使用
+      第一步：定义关键帧（定义动画）
+        1、简单方式定义：
+          写法一：
+          @keyframes 动画名 {
+          /* 第一帧 */
+          from{
+            property1: value
+            property2: value
+          }
+          /* 最后一帧 */
+          to{
+            property1: value
+          }
+        }
+        2、完整方式定义：
+          @keyframes 动画名 {
+          /* 第一帧 */
+          0%{
+            property1: value
+            property2: value
+          }
+          25%{
+            property1: value
+          }
+          60%{
+            property1: value
+          }
+          /* 最后一帧 */
+          100%{
+            property1: value
+          }
+        }
+    第二步：给元素应用动画，用到的属性如下：
+        1、animation-name：给元素指定具体的动画（具体的关键帧）
+        2、animation-duration：设置动画所需时间
+        3、animation-delay：设置动画延迟
+  -->
+    <style>
+      .outer {
+        width: 1000px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .inner {
+        width: 100px;
+        height: 100px;
+        background-color: deepskyblue;
+        /* 应用动画到元素 */
+        animation-name: lulu2;
+        /* 动画持续的时间 */
+        animation-duration: 3s;
+        /* 动画延迟时间 */
+        animation-delay: 0.5s;
+      }
 
-    /*  */
-  </style>
-</head>
-<body>
-  <div class="outer">
-    <div class="inner"></div>
-  </div>
-</body>
+      /* 定义一个动画（定义一组关键帧）——— 第一种方式 */
+      @keyframes lulu {
+        /* 第一帧 */
+        from {
+        }
+        /* 最后一帧 */
+        to {
+          transform: translate(900px);
+          background-color: red;
+        }
+      }
+
+      /* 定义一个动画（定义一组关键帧）——— 第二种方式 */
+      @keyframes lulu2 {
+        /* 第一帧 */
+        0% {
+        }
+        29% {
+          background-color: pink;
+        }
+        48% {
+          background-color: orange;
+        }
+        88% {
+          background-color: purple;
+        }
+        /* 最后一帧 */
+        100% {
+          transform: translate(900px) rotate(360deg);
+          background-color: red;
+          border-radius: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+  </body>
 </html>

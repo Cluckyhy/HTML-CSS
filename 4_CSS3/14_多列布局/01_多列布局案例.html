@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_多列布局案例</title>
+    <!-- 
+      多列布局
+        常用属性如下：
+          column-count：指定列数，值为数字
+          column-width：指定列宽，值为长度
+          columns：同时指定列宽与列数，复合属性；值没有数量和顺序要求
+          column-gap：设置列边距，值是长度
+          column-rule-style：设置列与列之间边框的风格，值与 border-style 一致
+          column-rule-width：设置列与列之间边框的宽度，值是长度
+          column-rule-color：设置列与列之间边框的颜色
+          column-rule：设置列边框、复合属性
+          column-span：指定是否跨列；值为：none、all
+    -->
+    <style>
+      .outer {
+        width: 1000px;
+        margin: 0 auto;
+
+        /* 直接指定列数 */
+        /* column-count: 4; */
+
+        /* 指定每一列的宽度，会自动计算列数 */
+        /* column-width: 225px; */
+
+        /* 复合属性，能同时指定列宽和列数（不推荐使用） */
+        columns: 4 225px;
+
+        /* 调整列间距 */
+        column-gap: 20px;
+
+        /* 每一列的边框宽度 */
+        column-rule-width: 2px;
+
+        /* 每一列的边框风格 */
+        column-rule-style: dashed;
+
+        /* 每一列的边框颜色 */
+        column-rule-color: red;
+
+        /* 复合属性 */
+        column-rule: 2px dotted blue;
+      }
+      h1 {
+        column-span: all;
+        text-align: center;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <h1>《震惊！国际名模来了江西财经大学学习了。》</h1>
+      <p>
+        【开始】Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+        animi possimus praesentium quas rem enim provident illum modi deleniti.
+        Nobis tempora tenetur, atque deleniti possimus omnis laborum ad nisi
+        dignissimos quis? Vitae expedita tempore unde corporis placeat cum
+        soluta a. Ducimus similique mollitia tempora deleniti accusamus sunt, ex
+        quia cum debitis amet reiciendis eligendi esse, vero omnis ullam labore
+        facere corporis repudiandae voluptatibus inventore? Exercitationem
+        doloribus dignissimos eligendi unde ea? Labore vitae, eius explicabo
+        nihil ab pariatur laboriosam facilis praesentium excepturi impedit
+        mollitia! Necessitatibus, sed facilis illo voluptas officia dolor, alias
+        expedita at, modi in pariatur quos nostrum aliquam accusantium soluta.
+        Facere praesentium sed quaerat expedita quam repellat incidunt porro
+        quo! Rerum veritatis itaque perferendis nisi odit fugit optio
+        provident.【结束】
+      </p>
+      <p>
+        【开始】Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+        blanditiis dolorum aperiam non ea accusantium minima modi alias eveniet
+        sunt. Sit beatae error sequi nisi praesentium! Enim beatae, ex ullam
+        nostrum quis quo illum totam facere suscipit ea quia dolorem maiores
+        explicabo expedita impedit molestias, ad dicta eum assumenda rerum
+        dignissimos voluptates consequatur molestiae laudantium! Doloremque
+        quaerat itaque voluptatem accusamus, quos nostrum necessitatibus nisi,
+        asperiores magni soluta est. Odit natus inventore ipsum tempore fugit,
+        hic dolorem totam repudiandae voluptatibus aspernatur dolor laborum illo
+        iure eaque nam obcaecati! Impedit dicta perspiciatis tempora eveniet
+        maxime possimus, veniam praesentium temporibus, provident odio neque
+        quia distinctio voluptas harum laborum nihil! Reiciendis repellat minima
+        rem odio. Dolores repudiandae ex illum nihil officiis vitae, numquam
+        necessitatibus asperiores laboriosam possimus, dignissimos rerum at
+        dicta maxime quibusdam quo rem eligendi soluta cum? Nam obcaecati, quae
+        exercitationem quia, incidunt, neque nisi tempora tempore praesentium
+        eveniet ratione doloremque? Numquam, sapiente?【结束】
+      </p>
+      <p>
+        【开始】Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
+        omnis consequatur natus reprehenderit corrupti odit inventore nam
+        quaerat. Recusandae adipisci, iste error temporibus ab suscipit quo,
+        aperiam atque magni quod tempore hic dolore vero voluptatum quis veniam
+        numquam accusamus nisi, officiis modi cumque! Adipisci beatae nulla
+        autem eos quisquam dignissimos.【结束】
+      </p>
+      <p>
+        【开始】Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
+        fuga qui debitis quam sed itaque ipsum voluptate velit magnam non! Ipsa
+        necessitatibus labore laudantium vel explicabo fugiat est et blanditiis
+        repellat maxime similique nesciunt, mollitia eos. Id praesentium vel
+        possimus commodi obcaecati a distinctio labore voluptatibus culpa veniam
+        quos ab numquam quo aperiam aliquid itaque molestias esse, totam ducimus
+        cum inventore vitae! Enim nulla minima, neque accusantium eveniet nisi,
+        officiis, molestiae error odit voluptate vitae. Dicta, ab! Dicta porro
+        repellat omnis obcaecati numquam in magni deserunt! Impedit molestiae
+        cum maxime aliquam suscipit accusamus ea dignissimos quisquam eligendi
+        facere consequatur sed iste nobis libero placeat iure eaque! Omnis
+        dicta, suscipit nisi ab deleniti harum fugiat obcaecati laborum, quae
+        facilis sequi velit a nemo, qui facere exercitationem? Vel nobis,
+        veritatis nesciunt iusto quia aut repudiandae provident architecto
+        officia eaque, excepturi, iure natus incidunt a. Ex facilis ab molestias
+        exercitationem, temporibus, qui aspernatur omnis nulla, ullam numquam
+        molestiae fugit alias, dolorum quas iusto accusantium esse cumque aut
+        expedita praesentium doloremque rem sint assumenda asperiores,
+        recusandae vero. Fugiat quidem iste molestias explicabo eveniet. Maxime
+        eveniet repudiandae culpa. Ducimus perferendis nihil est sequi! Ipsum
+        dolorem id beatae minus commodi, atque et! Non labore enim reiciendis
+        veniam?【结束】
+      </p>
+    </div>
+  </body>
+</html>

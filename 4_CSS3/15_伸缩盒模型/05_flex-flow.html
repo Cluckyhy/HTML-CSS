@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_flex-flow</title>
+  <!-- 
+    flex-flow
+      flex-flow是一个复合属性，复合了 flex-direction 和 flex-wrap 两个属性，值没有顺序要求。
+      flex-flow: row wrap;
+  -->
+  <style>
+    .outer{
+      width: 1000px;
+      height: 600px;
+      background-color: gray;
+      margin: 0 auto;
+
+      /* 伸缩盒模型相关属性-start */
+      
+      /* 将该元素变为了伸缩容器（开启了flex布局） */
+      display: flex;
+
+      /* 调整主轴方向，水平从左往右，默认 */
+      /* flex-direction: row; */
+
+      /* 主轴换行方式，换行 */
+      /* flex-wrap: wrap; */
+
+      /* 上面两种的复合属性 */
+      flex-flow: row wrap;
+    }
+    .inner{
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+    .inner3{
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">1</div>
+    <div class="inner">2</div>
+    <div class="inner">3</div>
+    <div class="inner">4</div>
+    <div class="inner">5</div>
+    <div class="inner">6</div>
+    <div class="inner">7</div>
+    <div class="inner">8</div>
+    <div class="inner">9</div>
+    <div class="inner">10</div>
+    <div class="inner">11</div>
+  </div>
+</body>
+</html>

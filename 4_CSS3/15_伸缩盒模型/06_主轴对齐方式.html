@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06_主轴对齐方式</title>
+  <!-- 
+    主轴的对齐方式：
+      属性名：justify-content
+      常用值如下：
+        1、flex-start：主轴起点对齐 -- 默认值
+        2、flex-end：主轴终点对齐
+        3、center：居中对齐
+        4、space-around：均匀分布，两端距离是中间距离的一半
+        5、space-between：均匀分布，两端对齐（最常用）
+        6、space-evenly：均匀分布，两端距离与中间距离一致。
+  -->
+  <style>
+    .outer{
+      width: 1000px;
+      height: 600px;
+      background-color: gray;
+      margin: 0 auto;
+
+      /* 伸缩盒模型相关属性-start */
+      
+      /* 将该元素变为了伸缩容器（开启了flex布局） */
+      display: flex;
+
+      /* 调整主轴方向，水平从左往右，默认 */
+      flex-direction: row;
+
+      /* 主轴换行方式，换行 */
+      flex-wrap: wrap;
+
+      /* 主轴的对齐方式，主轴的起始位置 */
+      justify-content: flex-start;
+
+      /* 主轴的对齐方式，主轴的结束位置 */
+      justify-content: flex-end;
+
+      /* 主轴的对齐方式，居中对齐 */
+      justify-content: center;
+
+      /* 主轴的对齐方式，项目均匀的分布在一行中，项目左右两边的空白距离一样 */
+      justify-content: space-around;
+
+      /* 主轴的对齐方式，项目均匀的分布在一行中，项目与项目之间的距离是相等的，项目距边缘没有距离 */
+      justify-content: space-between;
+
+      /* 主轴的对齐方式，项目均匀的分布在一行中 */
+      justify-content: space-evenly;
+    }
+    .inner{
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+    .inner3{
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">1</div>
+    <div class="inner">2</div>
+    <div class="inner">3</div>
+  </div>
+</body>
+</html>

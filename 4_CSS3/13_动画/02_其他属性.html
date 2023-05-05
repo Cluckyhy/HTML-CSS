@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02_其他属性</title>
+    <!-- 
+      动画的其他属性：
+        1、animation-timing-function: linear;
+        2、animation-iteration-count;
+        3、animation-direction;
+        4、animation-fill-mode;
+        5、animation-play-state;
+    -->
+    <style>
+      .outer {
+        width: 1000px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .inner {
+        width: 100px;
+        height: 100px;
+        background-color: deepskyblue;
+        /* 应用动画到元素 */
+        animation-name: lulu;
+        /* 动画持续的时间 */
+        animation-duration: 3s;
+        /* 动画延迟时间 */
+        animation-delay: 0.5s;
+
+        /* *************其他属性--start--************* */
+        /* 设置动画的方式 */
+        animation-timing-function: linear;
+        /* animation-timing-function: steps(20); */
+
+        /* 设置动画播放的次数 */
+        animation-iteration-count: 2;
+        /* animation-iteration-count: infinite; */
+
+        /* 动画的方向 */
+        animation-direction: reverse;
+        animation-direction: alternate;
+        animation-direction: alternate-reverse;
+
+        /* 动画以外的状态（不发生动画的时候在哪里） */
+        animation-fill-mode: forwards;
+
+        /* 动画的播放状态 */
+        animation-play-state: paused;
+        animation-play-state: running;
+      }
+
+      .outer:hover .inner{
+        animation-play-state: paused;
+      }
+
+      /* 定义一个动画（定义一组关键帧）——— 第一种方式 */
+      @keyframes lulu {
+        /* 第一帧 */
+        from {
+        }
+        /* 最后一帧 */
+        to {
+          transform: translate(900px) rotate(360deg);
+          background-color: red;
+          border-radius: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+  </body>
+</html>

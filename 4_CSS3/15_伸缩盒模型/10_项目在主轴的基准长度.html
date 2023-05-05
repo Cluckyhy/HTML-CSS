@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10_项目在主轴的基准长度</title>
+  <!-- 
+    flex-basis
+      概念：flex-basis设置的是主轴方向上的基准长度，会让宽度或高度失效。
+      备注：主轴横向：宽度失效；主轴纵向：高度失效
+
+      作用：
+        浏览器根据这个属性设置的值，计算主轴上是否有多余的空间，默认值是auto，即：伸缩项目的宽或高。
+  -->
+  <style>
+    .outer{
+      width: 1000px;
+      height: 900px;
+      background-color: gray;
+      margin: 0 auto;
+
+      /* 伸缩盒模型相关属性-start */
+      
+      /* 将该元素变为了伸缩容器（开启了flex布局） */
+      display: flex;
+
+      /* 调整主轴方向，水平从左往右，默认 */
+      flex-direction: column;
+
+      /* 主轴换行方式，换行 */
+      flex-wrap: wrap;
+
+      /* 主轴的对齐方式，主轴的起始位置 */
+      justify-content: flex-start;
+
+    }
+    .inner{
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+    .inner2{
+      /* 设置伸缩项目在主轴上的基准长度，若主轴是横向的，宽失效，若主轴是纵向的，高失效 */
+      /* 默认 auto */
+      flex-basis: auto;
+      flex-basis: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">1</div>
+    <div class="inner inner2">2</div>
+    <div class="inner">3</div>
+  </div>
+</body>
+</html>

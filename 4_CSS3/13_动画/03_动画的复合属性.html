@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_动画的复合属性</title>
+    <!-- 
+      动画复合属性：
+        只设置一个时间表示duration，设置两个时间分别是：duration 和 delay，其他属性没有数量和顺序要求
+        animation: lulu 2s 0.5s linear 3 alternate-reverse forwards;
+      备注：
+        animation-play-state ——一般单独使用
+    -->
+    <style>
+      .outer {
+        width: 1000px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .inner {
+        width: 100px;
+        height: 100px;
+        background-color: deepskyblue;
+        animation: lulu 2s 0.5s linear 3 alternate-reverse forwards;
+      }
+
+      .outer:hover .inner{
+        animation-play-state: paused;
+      }
+
+      /* 定义一个动画（定义一组关键帧）——— 第一种方式 */
+      @keyframes lulu {
+        /* 第一帧 */
+        from {
+        }
+        /* 最后一帧 */
+        to {
+          transform: translate(900px) rotate(360deg);
+          background-color: red;
+          border-radius: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+  </body>
+</html>
