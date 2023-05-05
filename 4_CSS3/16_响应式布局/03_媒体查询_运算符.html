@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_媒体查询_运算符</title>
+    <!-- 
+      运算符：
+        and：并且
+        ,或or：或
+        not：否定
+        only：肯定
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        height: 200px;
+        background-color: gray;
+        text-align: center;
+        line-height: 200px;
+        font-size: 100px;
+      }
+
+      /* 且运算符 */
+      @media (min-width: 700px) and (max-width: 800px) {
+        h1 {
+          background-color: orange;
+        }
+      }
+
+      /* 且运算符 */
+      @media screen and (min-width: 700px) and (max-width: 800px) {
+        h1 {
+          background-color: skyblue;
+        }
+      }
+
+      /* 或运算符 */
+      @media screen and (max-width: 700px) or (min-width: 800px) {
+        h1 {
+          background-color: purple;
+        }
+      }
+
+      /* 否定运算符 */
+      @media not screen {
+        h1 {
+          background-color: pink;
+        }
+      }
+
+      /* 肯定运算符 */
+      @media only screen {
+        h1 {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>你好啊</h1>
+  </body>
+</html>

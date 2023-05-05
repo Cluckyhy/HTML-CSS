@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02_媒体查询_媒体特性</title>
+    <!-- 
+      媒体特性：
+        width：检测视口宽度
+        max-width：检测视口的最大宽度
+        min-width：检测视口的最小宽度
+        height：检测视口的高度
+        max-height：检测视口的最大高度
+        min-height：检测视口的最小高度
+        device-width：检测设备屏幕的宽度
+        max-device-width：检测设备屏幕的最大宽度
+        min-device-width：检测设备屏幕的最小宽度
+        orientation：检测视口的旋转方向（是否横屏）
+          1、portrait：视口处于纵向，即高度大于等于宽度。
+          2、landscape：视口处于横向，即宽度大于高度。
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        height: 200px;
+        background-color: gray;
+        text-align: center;
+        line-height: 200px;
+        font-size: 100px;
+      }
+
+      /* 检测到视口的宽度为800px时，应用如下样式 */
+      @media (width: 800px) {
+        h1 {
+          background-color: green;
+        }
+      }
+
+      /* 检测到视口的宽度小于等于700px时，应用如下样式 */
+      @media (max-width: 700px) {
+        h1 {
+          background-color: skyblue;
+        }
+      }
+
+      /* 检测到视口的宽度大于等于900px时，应用如下样式 */
+      @media (min-width: 900px) {
+        h1 {
+          background-color: pink;
+        }
+      }
+
+      /* 也可以检测高度，但是及其少用 检测到视口的高度等于800px时，应用如下样式*/
+      @media (height: 800px) {
+        h1 {
+          background-color: yellow;
+        }
+      }
+
+      /* 检测到屏幕的宽度等于1536时，应用如下样式 */
+      @media (device-width: 1536px) {
+        h1 {
+          background-image: linear-gradient(red, green);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>你好啊</h1>
+  </body>
+</html>
