@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_FC_简介</title>
+</head>
+<body>
+  <!-- 
+    FC的全称是 Formatting Context，元素在标准流里面都是属于一个FC的；
+      Boxes in the normal flow belong to a formatting context,which may be block or inline, but ont both
+      simultaneously. Block-level boxes participate in a blockformattin context. Inline-level boxes participate in an
+      inline formatting context.
+
+    块级元素的布局属于 Block Formatting Context （BFC）
+      也就是 block level box 都是在BFC中布局的
+    
+    行内级元素的布局属于 Inline Formatting Context （IFC）
+      而 inline level box 都是在IFC中布局的。
+   -->
+  
+  <!-- 
+    更加通俗的描述：
+      1、BFC 是 Block Formatting Context （块级格式上下文），可以理解成元素的一个“特异功能”。
+      2、该“特异功能”，在默认的情况下处于关闭状态，当元素满足了某些条件后，该“特异功能”被激活。
+      3、所谓激活“特异功能”，专业点说就是：该元素创建了BFC（又称：开启了BFC）
+    
+    2、如何开启BFC：
+      1、根元素  html
+      2、浮动元素
+      3、绝对定位、固定定位的元素
+      4、行内块元素
+      5、伸缩项目
+      6、overflow的值不为 visible 的块元素
+      7、表格单元格：table、thead、tbody、tfoot、th、td、tr、caption
+      8、多列容器
+      9、column-span 为 all 的元素（即使该元素没有包裹在多列容器中）
+      10、display的值，设置为 flow-root
+  -->
+</body>
+</html>
